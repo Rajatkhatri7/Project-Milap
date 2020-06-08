@@ -1,5 +1,5 @@
 #euvlidian algo
-# gcd(a,b)=gcd(a',b)=gcd(b,a')
+# gcd(a,b)=gcd(a',b)=gcd( b,a')
 
 
 def gcd(a,b):
