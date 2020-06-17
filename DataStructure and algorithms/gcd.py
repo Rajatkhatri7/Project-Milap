@@ -17,6 +17,6 @@ if __name__ == "__main__":
     res = gcd(int(a),int(b))
     print(res)
 
-"""run time  = O(ab) becoz everytime in calculating reminder we r reducing the no by a factor of 2"""  
+"""run time  = O(log(ab)) becoz everytime in calculating reminder we r reducing the no by a factor of 2"""  
 
 
