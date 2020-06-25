@@ -30,7 +30,7 @@ int main(){
                 but after incremending it points to 1th position
 
                 for integer address increment by 4
-                for char it is 
+                for char it is 8 (chk it)
     */
 
    *pointer = 25;
