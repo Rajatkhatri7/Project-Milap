@@ -5,15 +5,16 @@
 
 #n=B
 
+# L is farthest reachable dist with full tank
 
-def minrefills(x,n,L):  
-    numrefil=0,    # no refuils at starting
+def MinRefills(x,n,L):  
+    numrefil=0,    # currently we r at starting node
     currentrefil=0
 
     while currentrefil<=n:
         lastrefill=currentrefil 
 
-        while (currentrefil<=n and x[currentrefil+1]-x[lastrefill]<=L):
+        while (currentrefil<=n and x[currentrefil+1]-x[lastrefill]<=L): # checking the farthest reachable gas s
             currentrefil+=1
         if currentrefil==lastrefill:
             return 0
@@ -22,3 +23,17 @@ def minrefills(x,n,L):
 
     return numrefil
 
+
+
+"""
+O(n) running time 
+
+starting from 0 to n+1 for current refuils 
+and 0 to n for numrefuils   
+
+
+
+
+
+
+"""
