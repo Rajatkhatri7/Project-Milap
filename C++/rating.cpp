@@ -1,44 +1,35 @@
 #include <iostream>
-#include <string>
+#include<string>
 using namespace std;
-
-
 
 int main(){
 
     int rating;
-    string my_str;
-//cout<<"Please rate our services from 1 to 5 \n";
+    string feedback;
+    cout<<"please enter the rating\n";
 
-    
-
-    while(rating>5){
-        cout<<"please enter value between 1 and 5\n";
-        cin>>rating;
-    
+    cin>>rating;
+    if(rating>5 || rating<1){
+        cout<<"please enter the correct rating: \n";
+    }
 
    
-        if(rating==5){
-            cout<<"Thanks for giving us 5 star\n";
-        }
-        else if (rating==4){
+    else if(rating==5){
 
-
-            cout<<"thankyou we will improve next time \n ";
-
-        }
-        else{
-            cout<<"Please mentiion Your issues: ";
-            getline(cin,my_str);
-            cout<<my_str<<endl;
-            
-        }
-
-}
+        cout<<"Thankyou so much"<<endl;
+    }
+    else if(rating==4){
+        cout<<"thnx we will inprove later \n";
+    }
+    else if (rating<4){
+        cout<<"plesae mention the issues you faced: ";
+        getline(cin,feedback);
+        cout<<feedback;
+    }
 
 
 
+    return 0;
 
-return 0;
 
 }
