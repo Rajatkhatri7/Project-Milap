@@ -42,3 +42,5 @@ result = selected_food.get_total_price(count)+selected_drink.get_total_price(cou
 
 # Output 
 print("Your total is $"+str(result))
+
+
