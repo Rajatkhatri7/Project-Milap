@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 tickets = int(input("enter the no of tickets: "))
 king=75
 queen = 150
@@ -7,10 +10,10 @@ if tickets<5 or tickets>40:
     print("min of 5 or max 40 tickets can be booked at a time")
 else:
     
-    refr = input("do you want refreshment: ")
+    refr = input("do you want refreshment(y/n): ")
     if refr=="y":
         total_price+=tickets*50
-    coupon = input("do you have coupon?:  ")
+    coupon = input("do you have coupon(y/n)?:  ")
     circle = input("enter the circle: ")
     if circle=="k":
         total_price+= tickets*king
@@ -20,8 +23,8 @@ else:
         print("invlid input")
     
     if tickets>20 and coupon=="y":
-        total_price -= total_price*0.12
-        
+        total_price -= total_price*0.10
+        total_price -= total_price*0.02 
     elif coupon=="y":
         total_price -= total_price*0.02
         
