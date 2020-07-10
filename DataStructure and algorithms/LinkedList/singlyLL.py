@@ -38,7 +38,8 @@ class LinkedList:
     def insert_after(self,target_node,data):
         ptr = self.head
         while ptr: 
-            if target_node not in ptr.data: 
+            if target_node not in ptr.data:
+                print("target node not in the list") 
                 return
             else:
 
