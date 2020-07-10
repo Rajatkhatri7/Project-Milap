@@ -23,16 +23,3 @@ class Stack():
     def get_stack(self):
         return self.items
 
-
-stck1 = Stack()
-
-stck1.push("a")
-stck1.push("b")
-stck1.push("c")
-
-print(f' Initial stack elements are : {stck1.get_stack()}')
-
-stck1.pop()
-print(f"Elements of stack after poping the elements: {stck1.get_stack()}")
-
-print(f'Peeking to the stack : {stck1.peek()}')
