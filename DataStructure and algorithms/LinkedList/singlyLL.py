@@ -85,7 +85,22 @@ class LinkedList:
                 print("Index out of range")
             else:    
                 prev.next = ptr.next
-                ptr = None         
+                ptr = None  
+
+
+    def lengthOfList(self): #normal implementation
+        count = 0
+        ptr = self.head
+        while ptr:
+            count+=1
+            ptr = ptr.next
+        return count
+
+    def lenByRecursion(self,node): # len by recursion
+        if node is None:
+            return 0
+        return 1+self.lenByRecursion(node.next)
+
 
     def print_list(self):
         ptr = self.head
@@ -98,6 +113,9 @@ llist = LinkedList()
 llist.appending("A")
 llist.appending("B")
 llist.appending("C")
+
+print(llist.lengthOfList())
+print(llist.lenByRecursion(llist.head))
 
 
 llist.insert_after("m", "D")
