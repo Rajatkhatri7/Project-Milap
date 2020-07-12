@@ -49,7 +49,7 @@ class LinkedList:
                 ptr.next = new_node
             ptr = ptr.next
 
-    def delete_node(self,key):
+    def delete_node(self,key): # deletion by data
         ptr = self.head  #when key is starting position
         if ptr and ptr.data ==key:
             self.head = ptr.next
@@ -64,7 +64,28 @@ class LinkedList:
                 print("Provided node is not present in the linked list")
                 return 
             prev.next = ptr.next
-            ptr = None    
+            ptr = None    # removing garbage value
+
+
+    def delet_by_position(self,pos): #deletion by position
+        if self.head:  
+            ptr  = self.head
+        if pos == 0:     # when starting postion given
+            self.head = ptr.next
+            ptr  = None
+            return    
+        else:             #when other than starting postion
+            prev = None
+            pos_count = 0
+            while ptr and pos_count!=pos:
+                prev = ptr
+                ptr = ptr.next
+                pos_count+=1
+            if ptr == None:
+                print("Index out of range")
+            else:    
+                prev.next = ptr.next
+                ptr = None         
 
     def print_list(self):
         ptr = self.head
@@ -83,4 +104,6 @@ llist.insert_after("m", "D")
 
 llist.delete_node("B")
 llist.delete_node("V")
+llist.delet_by_position(5)
+llist.delet_by_position(0)
 llist.print_list()  
