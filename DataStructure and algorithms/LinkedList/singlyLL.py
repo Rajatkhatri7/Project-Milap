@@ -49,7 +49,22 @@ class LinkedList:
                 ptr.next = new_node
             ptr = ptr.next
 
-
+    def delete_node(self,key):
+        ptr = self.head  #when key is starting position
+        if ptr and ptr.data ==key:
+            self.head = ptr.next
+            ptr = None
+            return
+        else: # when deleting element is at other position
+            prev = None
+            while ptr and ptr.data!=key:
+                prev = ptr
+                ptr = ptr.next
+            if ptr is None:
+                print("Provided node is not present in the linked list")
+                return 
+            prev.next = ptr.next
+            ptr = None    
 
     def print_list(self):
         ptr = self.head
@@ -66,4 +81,6 @@ llist.appending("C")
 
 llist.insert_after("m", "D")
 
+llist.delete_node("B")
+llist.delete_node("V")
 llist.print_list()  
