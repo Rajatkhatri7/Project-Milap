@@ -105,9 +105,10 @@ class LinkedList:
     def print_list(self):
         ptr = self.head
         while ptr:
-            print(ptr.data)
+            
+            print(ptr.data,end=" -> ")
             ptr = ptr.next
-
+        print("None")
 
 
     def swap_nodes(self,key1,key2):
@@ -130,7 +131,7 @@ class LinkedList:
             prev2 = curr2
             curr2 = curr2.next
 
-        if not curr1 or not curr2:
+        if not curr1 or not curr2: # case when one of the two node are not present
             return
 
 
@@ -148,28 +149,36 @@ class LinkedList:
 
         curr1.next , curr2.next = curr2.next , curr1.next
 
-llist = LinkedList()
-llist.appending("A")
-llist.appending("B")
-llist.appending("C")
-llist.appending("D")
-
-print("Original List")
-llist.print_list()
 
 
-llist.swap_nodes("B", "C")
-print("Swapping nodes B and C that are not head nodes")
-llist.print_list()
 
-llist.swap_nodes("A", "B")
-print("Swapping nodes A and B where key_1 is head node")
-llist.print_list()
 
-llist.swap_nodes("D", "B")
-print("Swapping nodes D and B where key_2 is head node")
-llist.print_list()
+# llist = LinkedList()
+# llist.appending("A")
+# llist.appending("B")
+# llist.appending("C")
+# llist.appending("D")
 
-llist.swap_nodes("C", "C")
-print("Swapping nodes C and C where both keys are same")
-llist.print_list()
+# print("Original List")
+# llist.print_list()
+
+
+
+
+
+
+# llist.swap_nodes("B", "C")
+# print("Swapping nodes B and C that are not head nodes")
+# llist.print_list()
+
+# llist.swap_nodes("A", "B")
+# print("Swapping nodes A and B where key_1 is head node")
+# llist.print_list()
+
+# llist.swap_nodes("D", "B")
+# print("Swapping nodes D and B where key_2 is head node")
+# llist.print_list()
+
+# llist.swap_nodes("C", "C")
+# print("Swapping nodes C and C where both keys are same")
+# llist.print_list()
