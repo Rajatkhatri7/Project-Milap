@@ -8,17 +8,17 @@ def merge_sorted(llist_1,llist2):
     q = llist2.head
     s = None
 
-    if not p:
+    if not p: # when list are empty
         return q
     if not q:
         return p
 
 
-    if p and q: #when p and q are not none
+    if p and q: #when p and q are not none , extracting the head node
 
         if p.data<=q.data:
-            s = p
-            p = s.next
+            s = p           # pointing s to smaller value 
+            p = s.next      # pointing p to p.next actually becox s.next is p.next now
 
 
         else:
@@ -26,15 +26,20 @@ def merge_sorted(llist_1,llist2):
             q = s.next
         new_head  = s
 
-    while p and q:
+
+
+    while p and q:     # looping till  one or both list are none
       if p.data <= q.data:
           s.next = p 
           s = p 
-          p = s.next
+          p = s.next   # pointing p to p.next actually becox s.next is p.next now
+
       else:
           s.next = q
           s = q
           q = s.next
+
+
     if not p:
         s.next = q 
     if not q:
