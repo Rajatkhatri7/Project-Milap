@@ -1,4 +1,5 @@
-#!/usr/bin/env python3
+#!/usr/bin/env python3 
+#!/usr/bin/env python3 
 # Check whether n is present in an array of size m or not.
 import time
 
